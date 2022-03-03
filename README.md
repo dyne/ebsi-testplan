@@ -64,6 +64,108 @@ Abstract description like: 🚧 Zenroom is a software in **ALPHA stage** and are
 * [License](#-license)
 </details>
 
+
+## Objective
+
+1. Scope of Testing.
+
+The scope of the testing is the Zenbridge end to end functionalities and features, tested in a lab testing environment
+
+2. What is out of scope of Testing.
+
+This does not want to cover the integration with EPIC nor the EBSI infrastructure for now that is out of scope in the 2a phase
+
+3. What are the test objectives.
+
+To proof solidity and reliability of the solution, the integration of the components, performance auditing ans assessments of the Zenbridge solution in particular
+
+    1. Find the defects
+    2. Verify that the software meets the requirements
+    3. Improve software quality
+    4. Minimize the maintenance and software support costs and infrastructure
+    5. Avoid post deployment risks
+    6. Compliance with processes
+
+5. What are the project deadlines.
+This is the plan for the coming next 4 months
+
+6. What is the test execution schedule.
+Execution is drafted in detail in the document
+
+7. What are the project risks.
+Risky parts of the product rely on:
+
+  * faulty data injection handling
+  * performance
+  * interoperability of the blockchains
+  * swarm of oracles
+  * consensus
+  * data sharding and replication
+
+8. Deliverables
+For each component the following deliverable are considered (based on the type of component some deliverable will not be valid)
+ * Test cases Documents
+ * Test Plan for each component
+ * Testing Strategy
+ * Test Scripts
+ * Test Results/reports
+ * Test summary report
+ * Defect Report
+
+## Masterlpan
+
+Our masterplan involves a first run of testin gin [White-Box Testing](https://en.wikipedia.org/wiki/White-box_testing) mode, which lead to the firs two levels of testing:
+ 1. Unit testing
+ 2. Integration testing
+
+most of our software components, already have them in place (with high percentage of code coverage)
+
+Each component (depending of the tech stack) uses different testing tools that will be covered in deep in the following sections.
+
+The second step of our plan involves [Non-functional testing](https://en.wikipedia.org/wiki/Non-functional_testing) that focuses more on proof the reliability of Zenbridge. In detail:
+
+* Load testing
+* Stress Testing
+* Performance Testing
+* Security testing
+
+The third phase of the masterplan is the report generation of the results, by writing each Result reports of the executed tests and a summary report of the previous that includes all the defects and resolutions adopted.
+
+### Methodology
+
+The methodology is binded to to our SDLC (Softeare development lifecycle) that is an iterative approach:
+ 1. Testplanning
+ 1. test case and scenarios
+ 1. reporting
+ 1. verification/validation
+ 1. automated test
+ 1. restart the cycle from point 3
+
+## Zenbrige components
+
+As previously described all the componente of the zenbridge stack will be tested.
+The testing tools for the automated tests are covered in detail as below.
+
+### Consensusroom
+
+The oracle swarm prototype:
+  * Ansible tests (checking complitaion sanity and integration tests and unit tests)
+  * Shell script tests to cover the zencode
+  * and Rest API validation with http mock servers
+
+### Fabchain
+
+ganache
+/
+truffle
+
+
+### Zenswarm
+The  zenswarm prototype:
+  * Ansible tests (checking complitaion sanity and integration tests and unit tests)
+  * Shell script tests to cover the zencode
+  * and Rest API validation with http mock servers
+
 ***
 ## 💾 Install
 ```pip install / yard add {project_name}```
